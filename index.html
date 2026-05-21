@@ -13,24 +13,16 @@
 }
 body{background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;font-weight:300;min-height:100vh}
 .wrap{max-width:680px;margin:0 auto;padding:0 24px 80px}
-
-/* HEADER */
 header{padding:56px 0 40px;border-bottom:2px solid var(--ink);margin-bottom:48px;position:relative}
 .eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--highlight);margin-bottom:14px;font-weight:500}
 h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-weight:900;line-height:1.08;margin-bottom:20px}
 .subtitle{font-size:13.5px;color:var(--muted);line-height:1.75;max-width:500px;border-left:3px solid var(--highlight);padding-left:14px}
-
-/* ESTRELLA SECRETA */
 .secret-star{position:absolute;top:56px;right:0;font-size:18px;cursor:pointer;opacity:.15;transition:opacity .2s;user-select:none;background:none;border:none;color:var(--ink)}
 .secret-star:hover{opacity:.4}
-
-/* PROGRESS */
 .progress-wrap{margin-bottom:32px}
 .progress-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:8px;letter-spacing:.05em}
 .progress-bar{height:3px;background:var(--border)}
 .progress-fill{height:100%;background:var(--ink);transition:width .5s ease;width:0%}
-
-/* QUESTION */
 .qcard{background:var(--surface);border:1.5px solid var(--ink);padding:36px 32px 32px;margin-bottom:24px;animation:fadeIn .3s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .q-context{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--highlight);font-weight:500;margin-bottom:10px}
@@ -42,8 +34,6 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
 .option.selected{border-color:var(--ink);border-width:2px;background:var(--ink);color:var(--bg);padding:12px 15px}
 .opt-label{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.1em;margin-right:10px;opacity:.5}
 .option.selected .opt-label{opacity:.7}
-
-/* NAV */
 .nav{display:flex;justify-content:space-between;align-items:center}
 .btn{font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:11px 26px;border:1.5px solid var(--ink);cursor:pointer;background:transparent;color:var(--ink);transition:all .15s}
 .btn:hover{background:var(--ink);color:var(--bg)}
@@ -52,17 +42,16 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
 .btn-primary:disabled{opacity:.3;cursor:not-allowed}
 .btn-primary:disabled:hover{background:var(--ink)}
 
-/* NOMBRE MODAL antes del resultado */
+/* MODAL NOMBRE */
 .nombre-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;z-index:200;animation:fadeIn .2s ease}
 .nombre-box{background:var(--surface);border:2px solid var(--ink);padding:40px 36px;max-width:420px;width:90%;text-align:center}
 .nombre-box h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:10px}
-.nombre-box p{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.6}
-.nombre-input{width:100%;border:1.5px solid var(--border);background:var(--bg);font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:300;padding:12px 14px;color:var(--ink);margin-bottom:16px;outline:none;transition:border-color .15s}
+.nombre-box p.sub{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.nombre-input{width:100%;border:1.5px solid var(--border);background:var(--bg);font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:300;padding:12px 14px;color:var(--ink);margin-bottom:8px;outline:none;transition:border-color .15s}
 .nombre-input:focus{border-color:var(--ink)}
-.nombre-btn{width:100%;background:var(--ink);color:var(--bg);border:none;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:13px;cursor:pointer;transition:background .15s}
+.nombre-err{color:var(--highlight);font-size:12px;margin-bottom:14px;display:none;text-align:left}
+.nombre-btn{width:100%;background:var(--ink);color:var(--bg);border:none;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:13px;cursor:pointer;transition:background .15s;margin-top:8px}
 .nombre-btn:hover{background:#333}
-.nombre-anon{font-size:12px;color:var(--muted);margin-top:12px;cursor:pointer;text-decoration:underline}
-.nombre-anon:hover{color:var(--ink)}
 
 /* RESULT */
 #result{display:none}
@@ -89,7 +78,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
 /* ADMIN MODAL */
 .admin-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;z-index:300;animation:fadeIn .2s ease}
 .admin-overlay.open{display:flex}
-.admin-box{background:var(--surface);border:2px solid var(--ink);padding:36px 32px;max-width:480px;width:92%;max-height:85vh;overflow-y:auto}
+.admin-box{background:var(--surface);border:2px solid var(--ink);padding:36px 32px;max-width:520px;width:92%;max-height:85vh;overflow-y:auto}
 .admin-box h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:6px}
 .admin-sub{font-size:12px;color:var(--muted);margin-bottom:20px}
 .admin-pass-wrap{display:flex;gap:8px;margin-bottom:20px}
@@ -105,6 +94,10 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
 .admin-table tr:last-child td{border-bottom:none}
 .admin-empty{font-size:13px;color:var(--muted);padding:16px 0}
 .admin-notice{font-size:11.5px;color:var(--muted);margin-top:16px;line-height:1.6;border-top:1px solid var(--border);padding-top:14px}
+.admin-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px}
+.stat-box{background:var(--surface2);padding:12px;text-align:center;border:1px solid var(--border)}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900}
+.stat-label{font-size:10px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
 
 .hidden{display:none!important}
 @media(max-width:480px){
@@ -112,6 +105,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
   .sname{width:110px;font-size:11px}
   .nombre-box{padding:28px 22px}
   .admin-box{padding:24px 18px}
+  .admin-stats{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -142,18 +136,18 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
   </div>
   <div class="nav">
     <button class="btn" id="btnback" onclick="goBack()">← Anterior</button>
-    <button class="btn btn-primary" id="btnnext" onclick="pedirNombre()" disabled>Siguiente →</button>
+    <button class="btn btn-primary" id="btnnext" disabled>Siguiente →</button>
   </div>
 </div>
 
-<!-- MODAL NOMBRE -->
+<!-- MODAL NOMBRE OBLIGATORIO -->
 <div class="nombre-overlay hidden" id="nombreOverlay">
   <div class="nombre-box">
     <h3>Antes de ver tu resultado</h3>
-    <p>¿Cuál es tu nombre? Esto nos ayuda a entender mejor quiénes responden el test. Tu resultado es solo para ti.</p>
-    <input class="nombre-input" type="text" id="nombreInput" placeholder="Tu nombre o apodo" maxlength="60" />
+    <p class="sub">Ingresa tu nombre y apellido completo. Este dato nos ayuda a entender quiénes responden el test.</p>
+    <input class="nombre-input" type="text" id="nombreInput" placeholder="Nombre y apellido *" maxlength="80" />
+    <p class="nombre-err" id="nombreErr">⚠ Por favor ingresa tu nombre y apellido completo.</p>
     <button class="nombre-btn" onclick="confirmarNombre()">Ver mi resultado →</button>
-    <p class="nombre-anon" onclick="nombreAnonimo()">Prefiero continuar sin nombre</p>
   </div>
 </div>
 
@@ -193,7 +187,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
   </div>
 </div>
 
-</div><!-- end wrap -->
+</div>
 
 <!-- ADMIN MODAL -->
 <div class="admin-overlay" id="adminOverlay">
@@ -209,20 +203,16 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-
       <p class="admin-err" id="adminErr">Contraseña incorrecta</p>
     </div>
     <div id="adminContent" class="hidden">
-      <div id="adminTableWrap"></div>
-      <p class="admin-notice">
-        💡 Estos resultados también se guardan automáticamente en tu Google Sheets cuando configures la URL del script. Los datos mostrados aquí son los guardados en este navegador localmente.
-      </p>
+      <div class="admin-stats" id="adminStats"></div>
+      <div class="admin-table-wrap" id="adminTableWrap"></div>
+      <p class="admin-notice">💡 Los datos se guardan en Google Sheets automáticamente. La tabla de abajo muestra los guardados en este navegador.</p>
     </div>
   </div>
 </div>
 
 <script>
-// ─── CONFIGURACIÓN ───────────────────────────────────────────────
-// Pega aquí la URL de tu Google Apps Script desplegado:
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyZLy3_L5KHIx13FjwHqM5THMzZtp7nDlfGYrCAREMlxqxJGmMzjSJq02f3Lu1SpT0/exec';
 const ADMIN_PASS = '951026';
-// ─────────────────────────────────────────────────────────────────
 
 const Q = [
   {
@@ -238,7 +228,7 @@ const Q = [
   },
   {
     ctx:"Cultivos de coca y economía rural",
-    dato:"Colombia tiene 330.000 hectáreas de coca. El 89% de los campesinos productores nunca ha recibido crédito del Estado. El 83% no tiene asistencia técnica ni maquinaria.",
+    dato:"Colombia tiene 330.000 hectáreas de coca. El 89% de los campesinos nunca ha recibido crédito del Estado. El 83% no tiene asistencia técnica ni maquinaria.",
     text:"Un campesino en el Putumayo siembra coca porque es lo único que le compran. Lleva 20 años esperando que el Estado llegue con una alternativa. ¿Qué le ofreces?",
     opts:[
       {t:"Que deje la coca de inmediato. El Estado lo apoya con cultivos lícitos y lo hace socio de una empresa agroindustrial legal con compra garantizada.",s:{T:0,P:2,C:1}},
@@ -261,7 +251,7 @@ const Q = [
   {
     ctx:"Campo y propiedad de la tierra",
     dato:"El 54% de los campesinos no tiene título de la tierra que trabaja. El 89% nunca ha tenido acceso a crédito. Colombia tiene 39 millones de hectáreas aptas y solo cosecha 5.5 millones.",
-    text:"Una campesina lleva 30 años trabajando una tierra sin papeles. Nunca le han dado crédito ni asistencia técnica. Ese predio no aparece en ningún catastro. ¿Qué hace el Estado con ella?",
+    text:"Una campesina lleva 30 años trabajando una tierra sin papeles. Nunca le han dado crédito ni asistencia técnica. Ese predio no aparece en ningún catastro. ¿Qué hace el Estado?",
     opts:[
       {t:"Título de propiedad inmediato, crédito blando sin trámites y asesoría técnica. Sin papeles no hay banco que la atienda ni mercado que la vea.",s:{T:0,P:2,C:1}},
       {t:"Que ella y sus vecinos formen una cooperativa, accedan colectivamente a maquinaria y negocien juntos. La escala hace al campesino competitivo.",s:{T:0,P:1,C:2}},
@@ -271,7 +261,7 @@ const Q = [
   },
   {
     ctx:"Seguridad y grupos armados",
-    dato:"Hay más de 27.000 integrantes de grupos armados ilegales. En 2025 hubo 651 secuestros, 12.180 extorsiones y 107.924 desplazados. El ELN, las disidencias y el Clan del Golfo controlan regiones enteras.",
+    dato:"Hay más de 27.000 integrantes de grupos armados ilegales. En 2025 hubo 651 secuestros, 12.180 extorsiones y 107.924 desplazados.",
     text:"En un municipio del Cauca, el alcalde recibe amenazas, los maestros no pueden trabajar y los campesinos no salen de sus casas. El Estado no aparece hace años. ¿Qué hace?",
     opts:[
       {t:"Operación militar contundente para recuperar el control territorial. Sin presencia estatal con fuerza, ninguna otra política llega.",s:{T:2,P:1,C:0}},
@@ -304,7 +294,7 @@ const Q = [
   },
   {
     ctx:"Corrupción",
-    dato:"Se estiman 50 billones de pesos robados por corrupción anual. Colombia cayó al puesto 99 de 182 en el Índice de Percepción de Corrupción 2025. El caso UNGRD mostró recursos desviados destinados a damnificados en La Guajira.",
+    dato:"Se estiman 50 billones de pesos robados por corrupción anual. Colombia cayó al puesto 99 de 182 en el Índice de Percepción de Corrupción 2025.",
     text:"Un contratista gana una licitación que vale el doble de lo que costó la misma obra en el municipio vecino. El alcalde y el contratista son cuñados. ¿Cómo se evita?",
     opts:[
       {t:"Blockchain en contratación pública: que cada peso y cada etapa sea visible en tiempo real para cualquier ciudadano. Lo que se ve no se puede esconder.",s:{T:0,P:2,C:0}},
@@ -352,15 +342,15 @@ const Q = [
     text:"Si Colombia deja de explorar petróleo hoy, en 10 años no tendrá cómo pagar pensiones ni salud. Si sigue explorando, compromete el medioambiente que es su mayor riqueza futura. ¿Qué decide?",
     opts:[
       {t:"Explotar todo lo que hay mientras se construye la alternativa. Sin recursos petroleros hoy no hay transición energética mañana.",s:{T:2,P:2,C:0}},
-      {t:"Acelerar las renovables ahora para no depender más del petróleo. Colombia tiene sol, viento y agua. La transición no es un lujo sino necesidad fiscal y ambiental.",s:{T:0,P:1,C:2}},
+      {t:"Acelerar las renovables ahora. Colombia tiene sol, viento y agua. La transición no es un lujo sino necesidad fiscal y ambiental.",s:{T:0,P:1,C:2}},
       {t:"Explotar lo ya descubierto y viabilizado, sin nuevas exploraciones de alto riesgo. Usar esos ingresos para financiar la transición.",s:{T:1,P:2,C:0}},
       {t:"Rediseñar el sistema tributario para no depender del petróleo. Que empresas y grandes fortunas paguen lo que deben.",s:{T:0,P:0,C:2}}
     ]
   },
   {
     ctx:"Víctimas del conflicto",
-    dato:"Colombia tiene más de 9 millones de víctimas registradas. Solo el 3% ha recibido reparación integral. Hay más de 80.000 desaparecidos forzados sin resolver. Los acuerdos de paz de 2016 tienen cumplimiento parcial.",
-    text:"Una madre que lleva 15 años buscando a su hijo desaparecido por paramilitares aún no sabe dónde está. El Estado dice que no hay recursos. ¿Qué prioridad tiene eso frente a otros problemas urgentes?",
+    dato:"Colombia tiene más de 9 millones de víctimas registradas. Solo el 3% ha recibido reparación integral. Hay más de 80.000 desaparecidos forzados sin resolver.",
+    text:"Una madre que lleva 15 años buscando a su hijo desaparecido por paramilitares aún no sabe dónde está. El Estado dice que no hay recursos. ¿Qué prioridad tiene eso?",
     opts:[
       {t:"Es una obligación constitucional que no puede esperar. El Estado que no busca a sus desaparecidos no tiene legitimidad moral para gobernar.",s:{T:0,P:1,C:2}},
       {t:"Es fundamental, pero mientras sigan los grupos armados habrá más desaparecidos. La prevención tiene que ir al mismo ritmo que la búsqueda.",s:{T:2,P:1,C:0}},
@@ -376,7 +366,7 @@ const Q = [
       {t:"Reformar el proyecto para que sea constitucional. Un gobierno que pasa por encima de la Corte abre la puerta a que cualquier futuro gobierno haga lo mismo.",s:{T:1,P:2,C:1}},
       {t:"Convocar a la ciudadanía para que presione. Si la Corte bloquea reformas que la mayoría quiere, el problema es de legitimidad democrática, no jurídico.",s:{T:0,P:0,C:2}},
       {t:"Buscar la reforma constitucional si es necesario. Si la Constitución impide resolver problemas reales, hay que cambiarla por mecanismos democráticos.",s:{T:1,P:0,C:1}},
-      {t:"Respetar la decisión de la Corte sin importar la popularidad de la reforma. La separación de poderes no es obstáculo: es la garantía de que el cambio no se convierte en autoritarismo.",s:{T:1,P:2,C:0}}
+      {t:"Respetar la decisión de la Corte. La separación de poderes no es obstáculo: es la garantía de que el cambio no se convierte en autoritarismo.",s:{T:1,P:2,C:0}}
     ]
   },
   {
@@ -396,7 +386,7 @@ const PROFILES = {
   T:{
     name:"El Tigre — Abelardo de la Espriella",
     desc:"Tu forma de entender los problemas de Colombia prioriza el orden, la autoridad del Estado y la acción ejecutiva directa. Crees que sin seguridad y sin control del territorio no hay desarrollo posible, y que el aparato estatal debe adelgazarse para ser más eficiente. No necesariamente eres 'de derecha': simplemente priorizas que las cosas funcionen antes de distribuir.",
-    pct:"Cumplimiento estimado desde la presidencia: 35%. Varias de sus propuestas más llamativas requieren reformas legales o constitucionales que dependen del Congreso."
+    pct:"Cumplimiento estimado desde la presidencia: 35%. Varias de sus propuestas requieren reformas legales o constitucionales que dependen del Congreso."
   },
   P:{
     name:"Paloma Valencia y Juan Daniel Oviedo",
@@ -407,15 +397,10 @@ const PROFILES = {
     name:"Iván Cepeda — Pacto Histórico",
     desc:"Tu forma de entender Colombia parte de la desigualdad estructural y la deuda histórica con los excluidos. Crees que las comunidades deben ser protagonistas, no objetos de política, y que la paz y los derechos humanos son condición para el desarrollo. No necesariamente eres 'de izquierda': simplemente priorizas la raíz social de los problemas.",
     pct:"Cumplimiento estimado desde la presidencia: 38%. Sus propuestas más importantes requieren mayorías legislativas que no están garantizadas."
-  },
-  M:{
-    name:"Ninguno te representa completamente",
-    desc:"Tus respuestas están distribuidas entre las tres visiones sin una tendencia clara. Eso puede indicar que evalúas cada problema de forma independiente, sin seguir una ideología rígida. Ninguno de los tres candidatos actuales captura toda tu visión de país.",
-    pct:"Considera cuál candidato cumple más de lo que te importa en los temas que más te afectan directamente, más allá de la etiqueta ideológica."
   }
 };
 
-let cur=0, ans=[], sc={T:0,P:0,C:0}, userName='', pendingResult=false;
+let cur=0, ans=[], sc={T:0,P:0,C:0}, userName='';
 
 function render(){
   const q=Q[cur];
@@ -436,10 +421,11 @@ function render(){
     c.appendChild(b);
   });
   document.getElementById('btnback').style.visibility=cur===0?'hidden':'visible';
-  document.getElementById('btnnext').disabled=ans[cur]===undefined;
+  const btn=document.getElementById('btnnext');
+  btn.disabled=ans[cur]===undefined;
   const isLast=cur===Q.length-1;
-  document.getElementById('btnnext').textContent=isLast?'Ver mi resultado →':'Siguiente →';
-  document.getElementById('btnnext').onclick=isLast?pedirNombre:goNext;
+  btn.textContent=isLast?'Ver mi resultado →':'Siguiente →';
+  btn.onclick=isLast?pedirNombre:goNext;
   const card=document.getElementById('qcard');
   card.style.animation='none'; card.offsetHeight; card.style.animation='fadeIn .3s ease';
 }
@@ -450,31 +436,27 @@ function pick(i){
   document.getElementById('btnnext').disabled=false;
 }
 
-function goNext(){
-  if(cur<Q.length-1){cur++;render();}
-}
-
-function goBack(){
-  if(cur>0){cur--;render();}
-}
+function goNext(){ if(cur<Q.length-1){cur++;render();} }
+function goBack(){ if(cur>0){cur--;render();} }
 
 function pedirNombre(){
-  // Si es pregunta intermedia, simplemente avanzar
   if(cur<Q.length-1){goNext();return;}
-  // Es la última: mostrar modal de nombre
   document.getElementById('nombreOverlay').classList.remove('hidden');
+  document.getElementById('nombreErr').style.display='none';
   setTimeout(()=>document.getElementById('nombreInput').focus(),100);
 }
 
 function confirmarNombre(){
   const val=document.getElementById('nombreInput').value.trim();
-  userName=val||'Anónimo';
-  document.getElementById('nombreOverlay').classList.add('hidden');
-  showResult();
-}
-
-function nombreAnonimo(){
-  userName='Anónimo';
+  const partes=val.split(' ').filter(p=>p.length>0);
+  const err=document.getElementById('nombreErr');
+  if(partes.length<2){
+    err.style.display='block';
+    document.getElementById('nombreInput').focus();
+    return;
+  }
+  err.style.display='none';
+  userName=val;
   document.getElementById('nombreOverlay').classList.add('hidden');
   showResult();
 }
@@ -487,7 +469,7 @@ function showResult(){
   sc={T:0,P:0,C:0};
   ans.forEach((ai,qi)=>{
     const s=Q[qi].opts[ai].s;
-    sc.T+=s.T;sc.P+=s.P;sc.C+=s.C;
+    sc.T+=s.T; sc.P+=s.P; sc.C+=s.C;
   });
   const tot=sc.T+sc.P+sc.C;
   const pT=Math.round((sc.T/tot)*100);
@@ -495,12 +477,20 @@ function showResult(){
   const pC=Math.round((sc.C/tot)*100);
   const mx=Math.max(sc.T,sc.P,sc.C);
   const mxPct=Math.round((mx/tot)*100);
-  let winner='M';
-  if(mxPct>=46){
+
+  // Siempre hay ganador si alguien supera 40%, sino el que más tiene
+  let winner;
+  if(mxPct>=40){
     if(sc.T===mx) winner='T';
     else if(sc.P===mx) winner='P';
     else winner='C';
+  } else {
+    // Aún así damos el que más tiene
+    if(sc.T>=sc.P && sc.T>=sc.C) winner='T';
+    else if(sc.P>=sc.C) winner='P';
+    else winner='C';
   }
+
   const pr=PROFILES[winner];
   document.getElementById('resname').textContent=pr.name;
   document.getElementById('resdesc').textContent=pr.desc;
@@ -512,11 +502,11 @@ function showResult(){
     bv='Posible voto sesgado';
     bb=`Más del ${mxPct}% de tus respuestas apuntan a una sola visión. Eso no significa que estés equivocado, pero vale preguntarse: ¿escogiste esas respuestas porque analizaste el problema, o porque ya sabías a quién ibas a defender? El voto informado puede coincidir con la convicción, pero resiste el cuestionamiento.`;
   } else if(mxPct>=46){
-    bv='Voto con tendencia, pero con criterio propio';
+    bv='Voto con tendencia clara y criterio propio';
     bb=`Tienes una inclinación definida pero tus respuestas no son homogéneas. Eso sugiere que estás evaluando los problemas concretos, no siguiendo una bandera. Puedes estar en desacuerdo con "tu candidato" en algunos temas, que es exactamente lo que hace un voto consciente.`;
   } else {
-    bv='Voto independiente y analítico';
-    bb=`Tus respuestas están distribuidas entre las tres visiones sin concentrarse en ninguna. Eso es señal de que analizas cada problema por separado, sin dejarte llevar por la pertenencia a un bando. Ningún candidato actual te representa completamente.`;
+    bv='Voto distribuido — piensas cada tema por separado';
+    bb=`Tus respuestas están distribuidas entre las tres visiones. Eso es señal de que analizas cada problema de forma independiente, sin dejarte llevar por la pertenencia a un bando. Tu candidato más cercano no te representa en todo, lo cual puede ser la posición más honesta.`;
   }
   document.getElementById('bverdict').textContent=bv;
   document.getElementById('bbody').textContent=bb;
@@ -526,9 +516,9 @@ function showResult(){
   window.scrollTo({top:0,behavior:'smooth'});
 
   setTimeout(()=>{
-    [{id:'bt',pct:pT,w:sc.T===mx&&winner!=='M'},
-     {id:'bp',pct:pP,w:sc.P===mx&&winner!=='M'},
-     {id:'bc',pct:pC,w:sc.C===mx&&winner!=='M'}].forEach(({id,pct,w})=>{
+    [{id:'bt',pct:pT,w:winner==='T'},
+     {id:'bp',pct:pP,w:winner==='P'},
+     {id:'bc',pct:pC,w:winner==='C'}].forEach(({id,pct,w})=>{
       const b=document.getElementById(id);
       b.style.width=pct+'%';
       if(w) b.classList.add('winner');
@@ -538,41 +528,30 @@ function showResult(){
     document.getElementById('pc').textContent=pC+'%';
   },300);
 
-  // Guardar en localStorage
-  const entry={
-    fecha:new Date().toLocaleString('es-CO'),
-    nombre:userName,
-    resultado:pr.name,
-    tigre:pT,paloma:pP,cepeda:pC,
-    sesgo:bv
-  };
+  // Guardar localStorage
+  const entry={fecha:new Date().toLocaleString('es-CO'),nombre:userName,resultado:pr.name,tigre:pT,paloma:pP,cepeda:pC,sesgo:bv};
   const prev=JSON.parse(localStorage.getItem('quiz_resultados')||'[]');
   prev.push(entry);
   localStorage.setItem('quiz_resultados',JSON.stringify(prev));
 
-  // Enviar a Google Sheets si está configurado
-  if(APPS_SCRIPT_URL && APPS_SCRIPT_URL!=='https://script.google.com/home/projects/1jTzHk9eWrtnqcdpSrfPx9otcVltqM_wxoszBKdS4v4zqCYJHRSqtw-O5/edit'){
-    fetch(APPS_SCRIPT_URL,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        nombre:userName,
-        resultado:pr.name,
-        pct_tigre:pT,
-        pct_paloma:pP,
-        pct_cepeda:pC,
-        sesgo:bv
-      })
-    }).catch(()=>{});
-  }
+  // Enviar a Google Sheets via GET (evita CORS)
+  try {
+    const params=new URLSearchParams({
+      nombre:userName,
+      resultado:pr.name,
+      pct_tigre:pT,
+      pct_paloma:pP,
+      pct_cepeda:pC,
+      sesgo:bv
+    });
+    const img=new Image();
+    img.src=APPS_SCRIPT_URL+'?'+params.toString();
+  } catch(e){}
 }
 
 function restart(){
   cur=0;ans=[];sc={T:0,P:0,C:0};userName='';
-  ['bt','bp','bc'].forEach(id=>{
-    const b=document.getElementById(id);
-    b.style.width='0%';b.classList.remove('winner');
-  });
+  ['bt','bp','bc'].forEach(id=>{const b=document.getElementById(id);b.style.width='0%';b.classList.remove('winner');});
   document.getElementById('result').style.display='none';
   document.getElementById('quiz').classList.remove('hidden');
   document.getElementById('nombreInput').value='';
@@ -580,7 +559,7 @@ function restart(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// ─── ADMIN ───────────────────────────────────────────────────────
+// ADMIN
 function openAdmin(){
   document.getElementById('adminOverlay').classList.add('open');
   document.getElementById('adminContent').classList.add('hidden');
@@ -589,22 +568,12 @@ function openAdmin(){
   document.getElementById('adminErr').style.display='none';
   setTimeout(()=>document.getElementById('adminPass').focus(),100);
 }
-
-function closeAdmin(){
-  document.getElementById('adminOverlay').classList.remove('open');
-}
-
-document.getElementById('adminOverlay').addEventListener('click',function(e){
-  if(e.target===this) closeAdmin();
-});
-
-document.getElementById('adminPass').addEventListener('keydown',e=>{
-  if(e.key==='Enter') checkPass();
-});
+function closeAdmin(){ document.getElementById('adminOverlay').classList.remove('open'); }
+document.getElementById('adminOverlay').addEventListener('click',function(e){ if(e.target===this)closeAdmin(); });
+document.getElementById('adminPass').addEventListener('keydown',e=>{ if(e.key==='Enter')checkPass(); });
 
 function checkPass(){
-  const val=document.getElementById('adminPass').value;
-  if(val===ADMIN_PASS){
+  if(document.getElementById('adminPass').value===ADMIN_PASS){
     document.getElementById('adminLogin').style.display='none';
     document.getElementById('adminContent').classList.remove('hidden');
     renderAdminTable();
@@ -617,25 +586,33 @@ function checkPass(){
 
 function renderAdminTable(){
   const data=JSON.parse(localStorage.getItem('quiz_resultados')||'[]');
+  
+  // Stats
+  const total=data.length;
+  const tCount=data.filter(d=>d.resultado.includes('Tigre')).length;
+  const pCount=data.filter(d=>d.resultado.includes('Paloma')).length;
+  const cCount=data.filter(d=>d.resultado.includes('Cepeda')).length;
+  document.getElementById('adminStats').innerHTML=`
+    <div class="stat-box"><div class="stat-num">${total}</div><div class="stat-label">Total respuestas</div></div>
+    <div class="stat-box"><div class="stat-num">${tCount}</div><div class="stat-label">El Tigre</div></div>
+    <div class="stat-box"><div class="stat-num">${pCount}</div><div class="stat-label">Paloma/Oviedo</div></div>
+    <div class="stat-box" style="grid-column:1/-1"><div class="stat-num">${cCount}</div><div class="stat-label">Cepeda</div></div>
+  `;
+
   const wrap=document.getElementById('adminTableWrap');
   if(data.length===0){
-    wrap.innerHTML='<p class="admin-empty">Aún no hay resultados guardados. Los datos aparecerán aquí cuando alguien complete el quiz en este navegador.</p>';
+    wrap.innerHTML='<p class="admin-empty">Aún no hay resultados. Cuando alguien complete el quiz aparecerán aquí.</p>';
     return;
   }
-  let html=`<table class="admin-table">
-    <thead><tr>
-      <th>#</th><th>Fecha</th><th>Nombre</th><th>Resultado</th>
-      <th>Tigre</th><th>Paloma</th><th>Cepeda</th><th>Sesgo</th>
-    </tr></thead><tbody>`;
+  let html=`<table class="admin-table"><thead><tr>
+    <th>#</th><th>Fecha</th><th>Nombre</th><th>Resultado</th>
+    <th>Tigre</th><th>Paloma</th><th>Cepeda</th><th>Sesgo</th>
+  </tr></thead><tbody>`;
   data.slice().reverse().forEach((r,i)=>{
     html+=`<tr>
-      <td>${data.length-i}</td>
-      <td>${r.fecha}</td>
-      <td>${r.nombre}</td>
+      <td>${data.length-i}</td><td>${r.fecha}</td><td>${r.nombre}</td>
       <td>${r.resultado.split('—')[0].trim()}</td>
-      <td>${r.tigre}%</td>
-      <td>${r.paloma}%</td>
-      <td>${r.cepeda}%</td>
+      <td>${r.tigre}%</td><td>${r.paloma}%</td><td>${r.cepeda}%</td>
       <td style="font-size:11px">${r.sesgo}</td>
     </tr>`;
   });
