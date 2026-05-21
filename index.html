@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¿Qué Colombia quieres? — 2026</title>
+<title>Estudio sociopolítico Colombia 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -14,61 +14,49 @@ body{background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',sans-seri
 .ty{flex:2;background:var(--Y)}.tb{flex:1;background:var(--B)}.tr{flex:1;background:var(--R)}
 header{padding:44px 0 32px;border-bottom:3px solid var(--Y);margin-bottom:40px;position:relative}
 .eye{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--B);margin-bottom:12px;font-weight:500}
-h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.9rem);font-weight:900;line-height:1.1;margin-bottom:16px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:14px}
 .h1r{color:var(--R)}
-.sub{font-size:13px;color:var(--muted);line-height:1.75;max-width:480px;border-left:4px solid var(--Y);padding-left:12px}
+.sub{font-size:12.5px;color:var(--muted);line-height:1.75;max-width:480px;border-left:4px solid var(--Y);padding-left:12px}
 .star{position:absolute;top:44px;right:0;font-size:18px;cursor:pointer;opacity:.1;background:none;border:none;color:var(--Y);transition:opacity .2s}
 .star:hover{opacity:.3}
-
-/* PROGRESS */
 .pw{margin-bottom:28px}
 .pm{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:7px}
 .pb{height:4px;background:var(--border);border-radius:2px;overflow:hidden}
 .pf{height:100%;background:linear-gradient(90deg,var(--Y),var(--B));transition:width .5s ease;width:0%}
-
-/* CARD */
 .qcard{background:var(--sur);border:2px solid var(--ink);padding:28px 26px 24px;margin-bottom:20px;animation:fi .3s ease;position:relative;overflow:hidden}
 .qcard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--Y) 50%,var(--B) 75%,var(--R) 100%)}
 @keyframes fi{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .qctx{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--B);font-weight:500;margin-bottom:8px}
 .qdato{background:var(--sur2);border-left:3px solid var(--Y);padding:8px 12px;font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:16px;font-style:italic}
-.qtext{font-family:'Playfair Display',serif;font-size:clamp(.95rem,2.6vw,1.1rem);font-weight:700;line-height:1.4;margin-bottom:20px}
-
-/* OPTIONS — 3 */
+.qtext{font-family:'Playfair Display',serif;font-size:clamp(.95rem,2.5vw,1.08rem);font-weight:700;line-height:1.42;margin-bottom:20px}
 .opts{display:flex;flex-direction:column;gap:8px}
-.opt{background:transparent;border:1.5px solid var(--border);border-radius:2px;padding:12px 14px;cursor:pointer;font-size:12.5px;font-family:'IBM Plex Sans',sans-serif;font-weight:300;line-height:1.55;color:var(--ink);text-align:left;transition:all .15s;display:flex;align-items:flex-start;gap:10px}
+.opt{background:transparent;border:1.5px solid var(--border);border-radius:2px;padding:11px 14px;cursor:pointer;font-size:12.5px;font-family:'IBM Plex Sans',sans-serif;font-weight:300;line-height:1.55;color:var(--ink);text-align:left;transition:all .15s;display:flex;align-items:flex-start;gap:10px}
 .opt:hover{border-color:var(--B);background:#f0f4ff}
 .opt.sel{border-color:var(--B);border-width:2px;background:var(--B);color:#fff}
 .ol{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;border-radius:50%;border:1.5px solid currentColor;font-size:10px;font-weight:500;flex-shrink:0;opacity:.6;margin-top:1px}
 .opt.sel .ol{background:var(--Y);border-color:var(--Y);color:var(--ink);opacity:1}
-
-/* NAV */
 .nav{display:flex;justify-content:space-between}
 .btn{font-family:'IBM Plex Sans',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:10px 24px;border:2px solid var(--ink);border-radius:2px;cursor:pointer;background:transparent;color:var(--ink);transition:all .15s}
 .btn:hover{background:var(--ink);color:#fff}
 .btnp{background:var(--B);color:#fff;border-color:var(--B)}
 .btnp:hover{background:#002570}
 .btnp:disabled{opacity:.3;cursor:not-allowed;background:var(--B)}
-
-/* NOMBRE */
 .nov{position:fixed;inset:0;background:rgba(0,0,50,.6);display:flex;align-items:center;justify-content:center;z-index:200}
 .nob{background:var(--sur);border:2px solid var(--B);border-radius:2px;padding:36px 32px;max-width:400px;width:90%;text-align:center;position:relative;overflow:hidden}
 .nob::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--Y) 50%,var(--B) 75%,var(--R) 100%)}
-.nob h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin:10px 0 8px}
-.nob p{font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.nob h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin:10px 0 8px}
+.nob p{font-size:12.5px;color:var(--muted);margin-bottom:18px;line-height:1.6}
 .ni{width:100%;border:1.5px solid var(--border);background:var(--bg);font-family:'IBM Plex Sans',sans-serif;font-size:13px;padding:11px 13px;color:var(--ink);outline:none;border-radius:2px;margin-bottom:6px}
 .ni:focus{border-color:var(--B)}
 .nerr{color:var(--R);font-size:12px;margin-bottom:10px;display:none;text-align:left}
 .nbtn{width:100%;background:var(--B);color:#fff;border:none;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:12px;cursor:pointer;border-radius:2px;margin-top:6px}
 .nbtn:hover{background:#002570}
-
-/* RESULT */
 #result{display:none}
 .rban{height:7px;display:flex}
 .rby{flex:2;background:var(--Y)}.rbb{flex:1;background:var(--B)}.rbr{flex:1;background:var(--R)}
 .rtop{padding:40px 0 28px;border-bottom:3px solid var(--Y);margin-bottom:32px}
 .reye{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.rname{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2.3rem);font-weight:900;line-height:1.1;margin-bottom:14px;color:var(--B)}
+.rname{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:900;line-height:1.1;margin-bottom:14px;color:var(--B)}
 .rdesc{font-size:13px;color:var(--muted);line-height:1.82;max-width:500px}
 .ssec{margin-bottom:28px}
 .stit{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;padding-bottom:7px;border-bottom:1px solid var(--border)}
@@ -78,29 +66,27 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.9rem);font-
 .sb{height:100%;background:var(--B);transition:width 1.4s cubic-bezier(.4,0,.2,1);width:0%;border-radius:2px}
 .sb.win{background:linear-gradient(90deg,var(--Y),var(--R))}
 .sp{font-size:11px;color:var(--muted);width:34px;text-align:right;flex-shrink:0;font-weight:500}
-.bb{border:2px solid var(--B);border-radius:2px;padding:22px;margin-bottom:28px;position:relative;overflow:hidden}
-.bb::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--Y) 50%,var(--B) 75%,var(--R) 100%)}
+.bblock{border:2px solid var(--B);border-radius:2px;padding:22px;margin-bottom:28px;position:relative;overflow:hidden}
+.bblock::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--Y) 50%,var(--B) 75%,var(--R) 100%)}
 .bh{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;margin-top:4px}
 .bv{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.4;color:var(--B)}
 .bc{font-size:12.5px;color:var(--muted);line-height:1.75}
-.cump{background:var(--sur2);border-left:4px solid var(--Y);padding:16px 20px;margin-bottom:28px;font-size:12.5px;line-height:1.75;color:var(--muted);border-radius:0 2px 2px 0}
+.cump{background:var(--sur2);border-left:4px solid var(--Y);padding:16px 20px;margin-bottom:28px;font-size:12.5px;line-height:1.75;color:var(--muted)}
 .cump strong{color:var(--ink)}
 .ra{padding-top:20px;border-top:1px solid var(--border)}
-
-/* ADMIN */
 .adov{position:fixed;inset:0;background:rgba(0,0,50,.7);display:none;align-items:center;justify-content:center;z-index:300}
 .adov.open{display:flex}
-.adbox{background:var(--sur);border:2px solid var(--B);border-radius:2px;padding:28px;max-width:580px;width:94%;max-height:88vh;overflow-y:auto;position:relative}
+.adbox{background:var(--sur);border:2px solid var(--B);border-radius:2px;padding:28px;max-width:600px;width:94%;max-height:88vh;overflow-y:auto;position:relative}
 .adbox::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--Y) 50%,var(--B) 75%,var(--R) 100%)}
 .adbox h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin:8px 0 4px}
-.adsub{font-size:12px;color:var(--muted);margin-bottom:16px}
-.adpw{display:flex;gap:8px;margin-bottom:14px}
+.adsub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.adpw{display:flex;gap:8px;margin-bottom:12px}
 .adpi{flex:1;border:1.5px solid var(--border);background:var(--bg);font-family:'IBM Plex Sans',sans-serif;font-size:13px;padding:9px 11px;color:var(--ink);outline:none;border-radius:2px}
 .adpi:focus{border-color:var(--B)}
 .adpe{background:var(--B);color:#fff;border:none;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;padding:9px 16px;cursor:pointer;border-radius:2px}
 .aderrf{font-size:12px;color:var(--R);margin-bottom:8px;display:none}
 .adcl{position:absolute;top:12px;right:12px;background:none;border:none;font-size:18px;cursor:pointer;color:var(--muted)}
-.adst{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:16px}
+.adst{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:14px}
 .stbox{background:var(--sur2);padding:10px 6px;text-align:center;border:1px solid var(--border);border-radius:2px}
 .stnum{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--B)}
 .stlb{font-size:9px;color:var(--muted);letter-spacing:.07em;text-transform:uppercase;margin-top:2px}
@@ -109,19 +95,19 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.9rem);font-
 .adt th{background:var(--sur2);padding:7px 9px;text-align:left;font-weight:500;border-bottom:2px solid var(--B);white-space:nowrap;color:var(--B)}
 .adt td{padding:6px 9px;border-bottom:1px solid var(--border);vertical-align:top}
 .adt tr:hover td{background:var(--sur2)}
-.ademp{font-size:13px;color:var(--muted);padding:14px 0}
 .adnot{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.6;border-top:1px solid var(--border);padding-top:10px}
 .hidden{display:none!important}
-@media(max-width:480px){.qcard{padding:20px 15px}.sn{width:100px;font-size:11px}.nob,.adbox{padding:24px 16px}.adst{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.qcard{padding:20px 14px}.sn{width:100px;font-size:11px}.nob,.adbox{padding:22px 15px}.adst{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="tri"><div class="ty"></div><div class="tb"></div><div class="tr"></div></div>
 <div class="wrap">
+
 <header>
-  <p class="eye">Colombia 2026 · Voto informado</p>
-  <h1>¿Con quién va<br><span class="h1r">de verdad?</span></h1>
-  <p class="sub">12 situaciones reales. Sin nombres de candidatos. Elige la salida que más te convence. Al final verás a quién se parece lo que piensas.</p>
+  <p class="eye">Estudio sociopolítico · Colombia 2026</p>
+  <h1>¿Qué soluciones<br><span class="h1r">le convencen más?</span></h1>
+  <p class="sub">12 problemas reales del país. Tres salidas posibles para cada uno. Sin nombres de candidatos. Sus respuestas revelan con quién se alinea su visión de Colombia.</p>
   <button class="star" onclick="openAdmin()" title="">★</button>
 </header>
 
@@ -145,9 +131,9 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.9rem);font-
 <div class="nov hidden" id="nov">
   <div class="nob">
     <h3>Un dato antes de ver el resultado</h3>
-    <p>Escribe tu nombre y apellido. Es confidencial.</p>
+    <p>Escriba su nombre y apellido. Es confidencial y hace parte del estudio.</p>
     <input class="ni" type="text" id="ni" placeholder="Nombre y apellido *" maxlength="80"/>
-    <p class="nerr" id="nerr">⚠ Escribe nombre y apellido completo.</p>
+    <p class="nerr" id="nerr">⚠ Escriba nombre y apellido completo para continuar.</p>
     <button class="nbtn" onclick="confirmar()">Ver mi resultado →</button>
   </div>
 </div>
@@ -155,18 +141,18 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.9rem);font-
 <div id="result">
   <div class="rban"><div class="rby"></div><div class="rbb"></div><div class="rbr"></div></div>
   <div class="rtop">
-    <p class="reye">Tus respuestas se parecen más a…</p>
+    <p class="reye">Sus respuestas se alinean más con…</p>
     <h2 class="rname" id="rname"></h2>
     <p class="rdesc" id="rdesc"></p>
   </div>
   <div class="ssec">
-    <p class="stit">Afinidad con cada candidato</p>
+    <p class="stit">Afinidad con las propuestas de cada candidato</p>
     <div class="srow"><span class="sn">El Tigre</span><div class="st"><div class="sb" id="bt"></div></div><span class="sp" id="pt">0%</span></div>
     <div class="srow"><span class="sn">Paloma / Oviedo</span><div class="st"><div class="sb" id="bp"></div></div><span class="sp" id="pp">0%</span></div>
     <div class="srow"><span class="sn">Cepeda</span><div class="st"><div class="sb" id="bc"></div></div><span class="sp" id="pc">0%</span></div>
   </div>
-  <div class="bb">
-    <p class="bh">¿Cómo votaste?</p>
+  <div class="bblock">
+    <p class="bh">Perfil del voto</p>
     <p class="bv" id="bv"></p>
     <p class="bc" id="bcont"></p>
   </div>
@@ -190,7 +176,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.9rem);font-
     <div id="adcont" class="hidden">
       <div class="adst" id="adst"></div>
       <div class="adtw" id="adtw"></div>
-      <p class="adnot">💡 Datos guardados localmente y enviados a Google Sheets.</p>
+      <p class="adnot">💡 Datos guardados localmente y enviados a Google Sheets automáticamente.</p>
     </div>
   </div>
 </div>
@@ -199,265 +185,334 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.9rem);font-
 const GSURL='https://script.google.com/macros/s/AKfycbzbpyV2AFacltM9Wd5GQlSOOp73Rw57K92DcLKoRKtcHgy3Nmw2JYThFo-wB85dbTE/exec';
 const APASS='951026';
 
-// BANCO: 24 preguntas. Cada una tiene EXACTAMENTE 3 opciones: una por candidato (T, P, C).
-// El orden se mezcla aleatoriamente para que no se sepa cuál es de quién.
-// Se muestran 12 preguntas aleatorias del banco en cada quiz.
+/*
+  BANCO DE 24 PREGUNTAS
+  Cada pregunta tiene EXACTAMENTE 3 opciones:
+    T = propuesta real de Abelardo de la Espriella (13 propuestas "Patria Milagro")
+    P = propuesta real de Paloma Valencia / Oviedo (111 puntos "Colombia Más Grande")
+    C = propuesta real de Iván Cepeda / Pacto Histórico
+  
+  REGLAS DE NEUTRALIDAD:
+  - Ninguna opción usa palabras con carga ideológica visible
+  - Las tres opciones suenan igual de razonables
+  - El orden se mezcla aleatoriamente en cada quiz
+  - Se muestran 12 de las 24 preguntas, elegidas al azar
+*/
 
 const BANCO=[
+
+  // 1 — SALUD · EPS
   {
-    ctx:"Salud · EPS",
-    dato:"Las EPS deben 24 billones a hospitales. En 2025 murieron 2.436 personas por demoras evitables. Los medicamentos llegan tarde o incompletos al 90% de los pacientes.",
-    text:"Va a urgencias. Le dicen que no hay cupo porque la EPS no ha pagado. ¿Qué debería pasar?",
+    ctx:"Sistema de salud",
+    dato:"Las EPS deben 24 billones de pesos a hospitales. En 2025 murieron 2.436 personas por demoras evitables en atención.",
+    text:"El sistema de salud lleva años sin funcionar bien. ¿Cuál es el mejor camino para que los pacientes reciban atención a tiempo?",
     opts:[
-      {t:"La EPS que no paga en 30 días pierde la operación. La plata pública no puede quedarse en manos de quien no presta el servicio.",s:{T:0,P:2,C:0}},
-      {t:"Los hospitales públicos deben atenderlo sin importar lo que deba la EPS. El Estado salda después la deuda.",s:{T:0,P:0,C:2}},
-      {t:"Hay que ir a la raíz: mientras exista corrupción en el sistema, la plata nunca va a llegar completa al hospital.",s:{T:2,P:0,C:0}}
+      {t:"Hacer un seguimiento semanal a cada EPS desde la Presidencia y suspenderla si no paga a los hospitales en 30 días.",s:{T:2,P:0,C:0}},
+      {t:"Pagar la deuda acumulada a clínicas y hospitales de inmediato e instalar un sistema de control en tiempo real para que no vuelva a pasar.",s:{T:0,P:2,C:0}},
+      {t:"Garantizar que cada peso que el Estado asigna para salud llegue directamente al hospital, sin pasar por entidades que se quedan con parte.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 2 — CONTRATOS EN SALUD
   {
-    ctx:"Trabajo · Contratos",
-    dato:"El 60% del personal de salud trabaja por cooperativas sin vacaciones ni cesantías. Hacen las mismas funciones que un empleado directo pero sin los mismos derechos.",
-    text:"Una enfermera trabaja igual que su compañera pero gana menos y no tiene prestaciones porque es 'asociada' de una cooperativa. ¿Qué debe hacer el Estado?",
+    ctx:"Personal de salud · Contratos",
+    dato:"El 60% de médicos y enfermeras trabaja sin vacaciones ni cesantías porque los vinculan como 'asociados' de cooperativas, no como empleados directos.",
+    text:"Una enfermera que lleva 8 años haciendo el mismo trabajo que su compañera de planta gana menos y no tiene los mismos beneficios. ¿Qué debería hacer el Estado?",
     opts:[
-      {t:"Si hace las mismas funciones bajo las mismas órdenes, hay contrato laboral. El nombre 'cooperativa' no puede servir para no pagar lo que se debe.",s:{T:0,P:2,C:0}},
-      {t:"Sin sindicatos fuertes en el sector privado esto no cambia. El derecho a organizarse y negociar debe ser efectivo, no de papel.",s:{T:0,P:0,C:2}},
-      {t:"Multa millonaria a clínicas que encubran relaciones laborales. Lo que le cuesta al empleador incumplir debe ser mayor que cumplir.",s:{T:2,P:0,C:0}}
+      {t:"Crear una ley que obligue a contratar directamente a quien trabaje más de 3 meses seguidos en el mismo lugar con las mismas funciones.",s:{T:0,P:0,C:2}},
+      {t:"Multar a las instituciones que disfracen relaciones de trabajo para no pagar lo que corresponde. El incumplimiento debe costar más que cumplir.",s:{T:2,P:0,C:0}},
+      {t:"Fijar un salario mínimo para el sector salud que aplique sin importar el tipo de contrato, mientras se avanza en la formalización completa.",s:{T:0,P:2,C:0}}
     ]
   },
+
+  // 3 — PENSIONES
   {
-    ctx:"Pensiones",
+    ctx:"Pensiones · Vejez",
     dato:"El 72% de los colombianos mayores de 65 años no tiene pensión. La mayoría trabajó toda su vida pero siempre en la informalidad.",
-    text:"Un señor de 68 años trabajó en construcción toda su vida, nunca cotizó y vive de lo que le dan sus hijos. ¿Qué le debe el Estado?",
+    text:"Un señor de 68 años trabajó en construcción toda su vida y hoy vive de lo que le dan sus hijos. ¿Qué debería garantizarle el Estado?",
     opts:[
-      {t:"Un subsidio mensual garantizado para todo adulto mayor sin pensión. Trabajó décadas en una economía que nunca le ofreció formalidad.",s:{T:0,P:2,C:0}},
-      {t:"Pensión básica universal para todos los mayores, financiada con impuestos. El sistema de cotización individual falló para la mitad del país.",s:{T:0,P:0,C:2}},
-      {t:"Que sus años de trabajo informal cuenten de alguna forma. Quien contribuyó a la economía merece algo al final.",s:{T:2,P:0,C:0}}
+      {t:"Un subsidio mensual fijo para todo adulto mayor sin pensión, que cubra al menos sus necesidades básicas.",s:{T:0,P:2,C:0}},
+      {t:"Una pensión básica para todos los mayores, financiada con los impuestos que todos pagan, sin depender de cuánto cotizó cada uno.",s:{T:0,P:0,C:2}},
+      {t:"Reconocer los años de trabajo aunque hayan sido informales y convertirlos en algún tipo de beneficio al llegar a la vejez.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 4 — VIVIENDA
   {
     ctx:"Vivienda",
-    dato:"4.9 millones de hogares tienen déficit de vivienda. El 70% no puede acceder a crédito hipotecario porque trabaja informalmente.",
-    text:"Una familia lleva 20 años en un barrio de invasión sin escrituras ni agua potable. El municipio amenaza con demoler pero no ofrece adónde ir. ¿Qué pasa con ellos?",
+    dato:"Hay 4.9 millones de hogares sin vivienda adecuada. El 70% de los colombianos no puede acceder a un crédito hipotecario porque trabaja de forma informal.",
+    text:"Una familia lleva 20 años en un barrio sin escrituras, sin agua potable y sin que el municipio les ofrezca adónde ir. ¿Cuál es la solución?",
     opts:[
-      {t:"Legalización del predio. Si el Estado no ofreció alternativa en 20 años, no puede demoler sin garantizar adónde van.",s:{T:0,P:0,C:2}},
-      {t:"Crédito de vivienda accesible para informales usando la factura de servicios como historial de pago.",s:{T:0,P:2,C:0}},
-      {t:"Agua potable antes que escrituras. Una familia sin agua no puede pensar en crédito ni en legalización.",s:{T:2,P:0,C:0}}
+      {t:"Darles título legal del predio donde ya viven y llevar los servicios básicos. Si llevan 20 años ahí, ese es su hogar.",s:{T:0,P:0,C:2}},
+      {t:"Ofrecer créditos de vivienda con cuotas ajustadas al ingreso real de la familia, sin exigir contrato laboral formal como requisito.",s:{T:0,P:2,C:0}},
+      {t:"Construir viviendas nuevas en zonas con todos los servicios y trasladar a las familias con acompañamiento del Estado.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 5 — COCA Y CAMPO
   {
-    ctx:"Coca · Campo",
-    dato:"330.000 hectáreas de coca. El campesino que la siembra nunca ha recibido crédito del Estado. El kilo de coca paga 3 veces más que cualquier cultivo legal en la puerta de la finca.",
-    text:"Un campesino en el Putumayo siembra coca porque es lo único que le compran en la finca. Lleva 20 años esperando una alternativa real. ¿Qué se hace?",
+    ctx:"Cultivos · Economía campesina",
+    dato:"El campesino que siembra coca recibe en la finca 3 veces más de lo que pagan por cualquier cultivo legal. El 89% nunca ha recibido apoyo del Estado.",
+    text:"Un campesino que lleva 20 años esperando una alternativa real sigue sembrando lo único que le compran en la puerta de su casa. ¿Cómo se cambia eso?",
     opts:[
-      {t:"Si el Estado garantiza comprar el producto legal al mismo precio que paga el narco, el campesino siembra lo que sea. El problema es el mercado, no la voluntad del campesino.",s:{T:0,P:2,C:0}},
-      {t:"La decisión debe venir de la comunidad, no de un funcionario de Bogotá. Los planes que fallan son los diseñados sin el campesino.",s:{T:0,P:0,C:2}},
-      {t:"Mientras haya grupos armados cobrando por cada gramo que sale, el campesino no puede elegir. La seguridad es condición previa a cualquier alternativa.",s:{T:2,P:0,C:0}}
+      {t:"El Estado garantiza comprarle el producto legal al mismo precio que le paga el comprador ilegal por la coca. Si el negocio legal es igual de rentable, el campesino cambia.",s:{T:0,P:2,C:0}},
+      {t:"Recuperar primero la seguridad en esa zona. Mientras otros controlan el territorio, el campesino no puede elegir libremente qué sembrar.",s:{T:2,P:0,C:0}},
+      {t:"Que la comunidad decida colectivamente qué cultivar y el Estado apoye lo que ellos propongan, no lo que se diseñe desde las ciudades.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 6 — INFORMALIDAD LABORAL
   {
-    ctx:"Informalidad laboral",
-    dato:"El 44% de los trabajadores urbanos y el 83% de los rurales son informales. Sin contrato, sin pensión, si se enferman pierden el día.",
-    text:"Un conductor de app lleva 3 años trabajando 12 horas diarias. La plataforma lo llama 'asociado'. No tiene ARL ni pensión. Si el carro se daña, él paga. ¿Quién responde?",
+    ctx:"Trabajo informal",
+    dato:"El 44% de los trabajadores urbanos son informales. Sin contrato, no tienen pensión, no tienen vacaciones y si se enferman pierden el día.",
+    text:"Un conductor de aplicación lleva 3 años trabajando 12 horas diarias. No tiene seguro de accidente ni aportes a pensión. Si el carro se daña, él paga solo. ¿Quién responde por él?",
     opts:[
-      {t:"Si la plataforma controla el precio, el horario y puede desconectarlo, hay relación laboral. La ley debe actualizarse para la economía digital.",s:{T:0,P:2,C:0}},
-      {t:"Las plataformas deben aportar a seguridad social en proporción a las horas trabajadas. No necesariamente contrato fijo, pero sí ARL y pensión.",s:{T:2,P:0,C:0}},
-      {t:"Protección social universal desligada del contrato. Salud y pensión para todos, trabajen como trabajen.",s:{T:0,P:0,C:2}}
+      {t:"La empresa que se beneficia de su trabajo debe aportar a su seguridad y pensión, aunque no lo llame empleado.",s:{T:0,P:2,C:0}},
+      {t:"Crear una categoría legal para quienes trabajan para un solo empleador sin contrato fijo, con derechos básicos garantizados.",s:{T:0,P:0,C:2}},
+      {t:"Reducir los costos de formalización para que a las empresas les convenga contratar legalmente en vez de buscar la manera de no hacerlo.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 7 — EDUCACIÓN RURAL
   {
     ctx:"Educación rural",
-    dato:"El 71% de estudiantes no alcanza nivel mínimo en matemáticas. Solo el 44% de escuelas rurales tiene internet. De cada 100 niños que entran a primero, 56 no terminan bachillerato.",
-    text:"Un colegio rural en el Chocó tiene 3 docentes para 200 estudiantes de primero a once. Sin internet, sin libros actualizados. ¿Por dónde se empieza?",
+    dato:"El 71% de estudiantes no alcanza el nivel mínimo en matemáticas. Solo el 44% de escuelas rurales tiene internet. De cada 100 niños que entran a primero de primaria, 56 no terminan el bachillerato.",
+    text:"Un colegio rural tiene 3 docentes para 200 estudiantes de todos los grados. Sin internet, sin libros actualizados. ¿Por dónde se empieza a resolver eso?",
     opts:[
-      {t:"Internet satelital en cada sede rural. Sin conectividad el niño del Chocó siempre estará años atrás del niño de Bogotá.",s:{T:0,P:2,C:0}},
-      {t:"Un docente bien pagado y motivado vale más que cualquier tecnología. El problema no es la tablet sino el maestro que no tiene con qué trabajar.",s:{T:2,P:0,C:0}},
-      {t:"Currículos adaptados a la realidad local. Enseñar lo que sirve en ese territorio, no solo contenido diseñado para una ciudad.",s:{T:0,P:0,C:2}}
+      {t:"Llevar internet y equipos a cada sede educativa rural. Sin acceso a la información, ese niño siempre está en desventaja frente a uno de ciudad.",s:{T:0,P:2,C:0}},
+      {t:"Pagarle mejor al docente rural y darle las herramientas que necesita. El mejor recurso de un colegio es el maestro motivado.",s:{T:2,P:0,C:0}},
+      {t:"Adaptar lo que se enseña a la realidad de ese territorio. No tiene sentido enseñar lo mismo en el Chocó que en Bogotá si los problemas son distintos.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 8 — SEGURIDAD PÚBLICA
   {
-    ctx:"Seguridad",
-    dato:"Más de 27.000 personas en grupos armados ilegales. En 2025: 651 secuestros, 12.180 extorsiones, más de 100.000 desplazados.",
-    text:"En un municipio del Cauca el alcalde trabaja desde otra ciudad por amenazas, los maestros no pueden salir y los comerciantes pagan vacuna cada semana. ¿Qué hace el Estado?",
+    ctx:"Seguridad pública",
+    dato:"En 2025: 651 secuestros, 12.180 extorsiones reportadas y más de 100.000 personas desplazadas. Hay más de 27.000 personas en grupos armados ilegales.",
+    text:"En un municipio, los comerciantes pagan vacuna cada semana, el alcalde trabaja desde otra ciudad por amenazas y los maestros no pueden salir. ¿Qué debe hacer el Estado?",
     opts:[
-      {t:"Operación para recuperar el control. Sin que el Estado llegue con fuerza primero, nada más puede funcionar después.",s:{T:2,P:0,C:0}},
-      {t:"Desarticular las finanzas del grupo: cuentas, bienes, flujo de dinero. Un grupo sin plata no dura. Eso es más efectivo que una operación de choque.",s:{T:0,P:2,C:0}},
-      {t:"Estado completo: policía, médico, juez y maestro juntos. Si llega solo el soldado y después se va, el grupo vuelve.",s:{T:0,P:0,C:2}}
+      {t:"Enviar fuerza pública suficiente para recuperar el control del municipio. Sin seguridad primero, lo demás no puede funcionar.",s:{T:2,P:0,C:0}},
+      {t:"Atacar las cuentas y los bienes del grupo que extorsiona. Sin dinero, ningún grupo armado se sostiene.",s:{T:0,P:2,C:0}},
+      {t:"Llegar con todo al mismo tiempo: seguridad, pero también médico, juez y maestro. Si solo llega el soldado y después se va, el problema regresa.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 9 — CORRUPCIÓN
   {
-    ctx:"Corrupción",
-    dato:"50 billones de pesos robados por corrupción al año. Colombia ocupa el puesto 99 de 182 países en transparencia. Los casos más grandes son en obras públicas que no se construyen.",
-    text:"Una alcaldía contrató un acueducto por 800 millones. La obra quedó incompleta. El contratista es cuñado del alcalde y la interventoría es de la misma red. ¿Qué pasa?",
+    ctx:"Corrupción en contratos",
+    dato:"Se estiman 50 billones de pesos robados por corrupción cada año. Los casos más grandes son obras públicas que se pagan pero no se terminan.",
+    text:"Una alcaldía contrató la construcción de un acueducto. La obra quedó incompleta, el contratista es familiar del alcalde y nadie responde. ¿Cómo se evita que eso pase?",
     opts:[
-      {t:"Cárcel rápida y extinción de bienes. Mientras la condena tarde 8 años y el corrupto pueda apelar indefinidamente, robar sigue siendo buen negocio.",s:{T:2,P:0,C:0}},
-      {t:"Todo el proceso de contratación pública visible en tiempo real para cualquier ciudadano. Lo que se puede ver es más difícil de robar.",s:{T:0,P:2,C:0}},
-      {t:"Veeduría ciudadana con poder real para congelar pagos si la obra no avanza. La comunidad que recibe el acueducto debe poder pararlo.",s:{T:0,P:0,C:2}}
+      {t:"Publicar en tiempo real cada etapa y cada pago de todos los contratos públicos. Lo que cualquier ciudadano puede ver es más difícil de robar.",s:{T:0,P:2,C:0}},
+      {t:"Que la comunidad que va a recibir la obra tenga poder legal para detener los pagos si no avanza según lo acordado.",s:{T:0,P:0,C:2}},
+      {t:"Cárcel efectiva para el funcionario corrupto y recuperación inmediata de sus bienes. Mientras el riesgo sea bajo, el robo seguirá siendo atractivo.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 10 — FINANZAS PÚBLICAS
   {
-    ctx:"Impuestos · Plata pública",
-    dato:"Hay 150 billones en exenciones tributarias a empresas, 100 billones en evasión estimada y 50 billones en corrupción anual. El Estado dice que no hay plata para salud ni vías.",
-    text:"El gobierno no tiene plata para arreglar los colegios y una empresa grande pagó cero pesos de impuesto de renta este año por una exención aprobada hace 10 años. ¿Qué se hace?",
+    ctx:"Plata pública · Gastos del Estado",
+    dato:"El Estado colombiano tiene 150 billones en exenciones de impuestos a empresas y 100 billones en evasión estimada. Al mismo tiempo dice no tener plata para arreglar colegios y hospitales.",
+    text:"El gobierno no tiene plata para lo básico, pero una empresa grande pagó cero pesos de impuesto de renta este año gracias a un beneficio aprobado hace diez años. ¿Cuál es la solución?",
     opts:[
-      {t:"Revisar cada exención tributaria una por una. Las que no generan empleo verificable se eliminan. No hay razón para que sigan existiendo.",s:{T:0,P:0,C:2}},
-      {t:"Recortar primero el gasto innecesario del Estado: burocracia, nóminas políticas, contratos que no sirven. El ajuste empieza adentro.",s:{T:2,P:0,C:0}},
-      {t:"DIAN con inteligencia artificial para cruzar declaraciones con movimientos bancarios. La evasión es en gran parte detectable con tecnología.",s:{T:0,P:2,C:0}}
+      {t:"Revisar uno a uno los beneficios tributarios. Los que no generan empleo comprobable ni inversión real deben eliminarse.",s:{T:0,P:0,C:2}},
+      {t:"Recortar primero el gasto innecesario del Estado: cargos que no sirven, contratos que no producen, entidades duplicadas.",s:{T:2,P:0,C:0}},
+      {t:"Usar tecnología para cruzar declaraciones de impuestos con movimientos bancarios. La evasión es detectable; lo que falta es la herramienta.",s:{T:0,P:2,C:0}}
     ]
   },
+
+  // 11 — TIERRA Y CAMPO
   {
-    ctx:"Tierra · Campesinado",
-    dato:"El 54% de los campesinos trabaja tierra sin título. El 89% nunca ha recibido crédito. Colombia tiene 39 millones de hectáreas aptas y cosecha solo 5.5 millones.",
-    text:"Una familia campesina lleva 25 años en un predio sin papeles. No puede pedir crédito, no puede vender legalmente, y cada tanto aparece alguien que dice ser el dueño. ¿Qué debe hacer el Estado?",
+    ctx:"Tierra campesina",
+    dato:"El 54% de los campesinos trabaja tierra sin título. Sin papeles no hay crédito, no hay seguro y cualquier día puede aparecer alguien que diga ser el dueño.",
+    text:"Una familia lleva 25 años trabajando un predio sin documentos. No puede acceder a ningún apoyo oficial porque legalmente no existen como propietarios. ¿Qué debería pasar?",
     opts:[
-      {t:"Título de propiedad en 90 días para quienes lleven más de 10 años en posesión comprobada. Los trámites no pueden seguir tardando más que una vida.",s:{T:0,P:2,C:0}},
-      {t:"Catastro completo del país. Colombia no sabe quién tiene qué tierra. Sin ese mapa, cualquier solución es provisional.",s:{T:2,P:0,C:0}},
-      {t:"La tierra concentrada e improductiva debe pagar más impuestos o salir al mercado. Eso libera suelo sin necesidad de quitárselo a nadie.",s:{T:0,P:0,C:2}}
+      {t:"Entregarles el título de propiedad en un plazo corto si pueden demostrar que llevan más de 10 años trabajando esa tierra.",s:{T:0,P:2,C:0}},
+      {t:"Primero actualizar el mapa de quién tiene qué tierra en todo el país. Sin ese inventario, cualquier solución queda a medias.",s:{T:2,P:0,C:0}},
+      {t:"La tierra que está concentrada en pocas manos y no se está usando debe pagar más impuestos, lo que la pondría a disposición de quien sí quiere producir.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 12 — LGBTI+
   {
-    ctx:"Derechos LGBTI+",
-    dato:"La adopción y la unión entre personas del mismo sexo están reconocidas legalmente en Colombia desde 2016. En 2024 hubo 178 homicidios de personas LGBTI+. El 62% reporta discriminación laboral.",
-    text:"Una pareja del mismo sexo quiere adoptar un niño que lleva 3 años en el sistema sin familia. El funcionario los rechaza por razones personales. ¿Qué debe pasar?",
+    ctx:"Derechos reconocidos",
+    dato:"Desde 2016, la ley colombiana reconoce los mismos derechos a todas las familias sin importar su composición. En la práctica, en muchos municipios esos derechos no se cumplen.",
+    text:"Una pareja quiere adoptar un niño que lleva 3 años en el sistema sin familia. El funcionario los rechaza por razones personales, sin ningún argumento legal. ¿Qué debe pasar?",
     opts:[
-      {t:"El funcionario está obligado a aplicar la ley, no sus creencias. Si la Corte Constitucional reconoció ese derecho, rechazarlo es falta gravísima.",s:{T:0,P:2,C:0}},
-      {t:"El niño lleva 3 años sin familia. Cualquier familia apta debe evaluarse por sus capacidades, no por su composición.",s:{T:2,P:0,C:0}},
-      {t:"Hace falta formación obligatoria y un defensor con capacidad sancionatoria real. Que denunciar discriminación tenga consecuencias en semanas, no en años.",s:{T:0,P:0,C:2}}
+      {t:"El funcionario debe cumplir la ley, no aplicar su criterio personal. Si la ley reconoce ese derecho, negarlo es una falta grave.",s:{T:0,P:2,C:0}},
+      {t:"El criterio principal debe ser el bienestar del niño. Cualquier familia que ofrezca condiciones estables debe ser evaluada por eso, no por su composición.",s:{T:2,P:0,C:0}},
+      {t:"Hace falta un mecanismo que sancione la discriminación institucional en pocos días, no en años. Mientras no haya consecuencias reales, el problema persiste.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 13 — ENERGÍA Y TARIFAS
   {
-    ctx:"Energía · Tarifas",
-    dato:"Colombia importó el 17% de su energía en el primer semestre de 2025. Las tarifas en la Costa Caribe subieron hasta 80% en dos años. Las reservas de petróleo alcanzan para 7 años.",
-    text:"Una familia en Barranquilla paga 400.000 pesos de luz al mes con un ventilador y una nevera. El recibo subió 70% en dos años. ¿Quién responde por eso?",
+    ctx:"Energía · Factura",
+    dato:"Las tarifas de energía en la Costa Caribe subieron hasta 80% en dos años. Colombia importó el 17% de su energía en el primer semestre de 2025.",
+    text:"Una familia paga 400.000 pesos de luz al mes con una nevera y un ventilador. La factura subió 70% en dos años. ¿Cómo se baja esa tarifa?",
     opts:[
-      {t:"La tarifa no puede subir más del 10% anual sin autorización. Una empresa de servicios públicos no puede trasladarle al usuario el costo de su propia ineficiencia.",s:{T:0,P:2,C:0}},
-      {t:"Paneles solares con financiación a largo plazo para estratos bajos. Que la energía del sol no sea solo para quien tiene capital.",s:{T:0,P:0,C:2}},
-      {t:"Hay que sacar más gas y petróleo de lo que ya está descubierto. Importar energía mientras sube la factura es un contrasentido.",s:{T:2,P:0,C:0}}
+      {t:"Sacar más gas propio de los campos ya descubiertos. Importar energía mientras la factura sube no tiene sentido si el recurso está en el subsuelo.",s:{T:2,P:0,C:0}},
+      {t:"Poner un tope legal al aumento anual de tarifas. Una empresa de servicios no puede trasladarle al usuario el costo de su propia ineficiencia.",s:{T:0,P:2,C:0}},
+      {t:"Financiar paneles solares para los hogares de menores ingresos. La energía del sol no debería ser solo para quien tiene capital.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 14 — MEDIO AMBIENTE
   {
-    ctx:"Medio ambiente",
-    dato:"Colombia destruye 14 hectáreas de bosque por hora. El 70% ocurre en la Amazonía por ganadería extensiva, cultivos ilegales y minería. Es el 2° país con mayor biodiversidad del mundo.",
-    text:"En el Caquetá, un colono tumba 50 hectáreas de selva para tener 30 vacas. Es ilegal pero no hay quien lo controle. El parque nacional tiene 3 guardabosques para 100.000 hectáreas. ¿Qué se hace?",
+    ctx:"Bosques · Agua",
+    dato:"Colombia pierde 14 hectáreas de bosque por hora. Es el segundo país con más biodiversidad del mundo. El agua de millones de colombianos depende de que esos bosques existan.",
+    text:"En el sur del país, colonos tumban selva para sobrevivir porque no tienen otra opción. Los parques tienen 3 guardabosques para 100.000 hectáreas. ¿Cómo se protege el bosque sin condenar a esa gente?",
     opts:[
-      {t:"Pagar más por conservar que por deforestar. Si el Estado le paga al colono más por dejar el bosque en pie que lo que gana con las vacas, conserva.",s:{T:0,P:2,C:0}},
-      {t:"Las comunidades que viven en la selva son los mejores guardabosques. Reconocerlas como dueñas con derechos reales es más efectivo que cualquier operación.",s:{T:0,P:0,C:2}},
-      {t:"Sin control al crimen que mueve la deforestación como lavado de activos, ninguna política ambiental funciona.",s:{T:2,P:0,C:0}}
+      {t:"Pagarle a cada familia que conserve el bosque más de lo que ganaría talándolo. Si cuidar es más rentable que destruir, el bosque se salva.",s:{T:0,P:2,C:0}},
+      {t:"Reconocer a las comunidades que viven ahí como las responsables legales de cuidar ese territorio. Ellas lo conocen mejor que cualquier entidad del Estado.",s:{T:0,P:0,C:2}},
+      {t:"Controlar primero las actividades ilegales que mueven la deforestación a gran escala. El colono que tumba 5 hectáreas no es el mismo problema que el que tumba 5.000.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 15 — VÍAS RURALES
   {
-    ctx:"Vías terciarias",
-    dato:"El 81% de las vías rurales está en mal estado. Una cosecha que se pierde en la finca por falta de vía equivale a no haberla sembrado.",
-    text:"Un municipio cafetero en el Huila lleva 20 años con la misma vía que se daña cada invierno. Las cosechas no salen durante 3 meses al año. ¿Cómo se resuelve?",
+    ctx:"Vías rurales",
+    dato:"El 81% de las vías rurales colombianas está en mal estado. Una cosecha que no se puede sacar porque la vía está rota equivale a no haberla producido.",
+    text:"Un municipio lleva 20 años con la misma vía que se destruye cada invierno. Las cosechas no salen durante meses. ¿Cómo se resuelve de verdad?",
     opts:[
-      {t:"Maquinaria del gobierno disponible para alcaldes y juntas de acción comunal. Que la comunidad decida qué vía va primero.",s:{T:0,P:2,C:0}},
-      {t:"La comunidad debe contratar directamente el mantenimiento con mano de obra local. Sin intermediario que se quede con la mitad de la plata.",s:{T:0,P:0,C:2}},
-      {t:"El dinero existe pero se roba. Sin control de la corrupción local no hay vía que dure más de un invierno.",s:{T:2,P:0,C:0}}
+      {t:"El gobierno nacional pone la maquinaria y los alcaldes y las comunidades deciden qué vía se arregla primero.",s:{T:0,P:2,C:0}},
+      {t:"Contratos de mantenimiento a 10 años con responsabilidad del contratista. Obras que duran 6 meses no resuelven nada.",s:{T:2,P:0,C:0}},
+      {t:"Que la comunidad misma contrate el mantenimiento con trabajadores del municipio. Sin intermediarios, la plata rinde más.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 16 — VÍCTIMAS
   {
     ctx:"Víctimas del conflicto",
-    dato:"Más de 9 millones de víctimas registradas. Solo el 3% ha recibido reparación integral. Más de 80.000 desaparecidos sin resolver.",
-    text:"Una madre lleva 16 años buscando a su hijo desaparecido. Tiene todos los papeles. La entidad dice que no hay presupuesto para ir a la vereda donde hay información. ¿Qué prioridad tiene eso?",
+    dato:"Más de 9 millones de víctimas registradas. Solo el 3% ha recibido reparación completa. Más de 80.000 familias siguen buscando a sus desaparecidos.",
+    text:"Una madre lleva 16 años buscando a su hijo desaparecido. Tiene todos los documentos. El Estado dice que no hay plata para ir a la zona donde hay información. ¿Qué prioridad tiene eso?",
     opts:[
-      {t:"Obligación constitucional que no puede cancelarse por presupuesto. El Estado que no busca a sus desaparecidos no tiene legitimidad para gobernar.",s:{T:0,P:0,C:2}},
-      {t:"Fondos de reparación financiados con bienes incautados al crimen. Que quienes generaron el daño paguen, no el contribuyente.",s:{T:2,P:0,C:0}},
-      {t:"Banco de ADN nacional gratuito y tecnología de punta para identificar desaparecidos. Ya existe la tecnología; lo que falta es la voluntad.",s:{T:0,P:2,C:0}}
+      {t:"Buscar a los desaparecidos es una obligación del Estado que no puede cancelarse por razones de presupuesto.",s:{T:0,P:0,C:2}},
+      {t:"Los recursos para reparar a las víctimas deben salir de los bienes que se les quiten a quienes causaron el daño, no solo del presupuesto general.",s:{T:2,P:0,C:0}},
+      {t:"Usar tecnología de identificación disponible hoy para acelerar la búsqueda. La herramienta existe; lo que hace falta es la decisión de usarla.",s:{T:0,P:2,C:0}}
     ]
   },
+
+  // 17 — HAMBRE Y POBREZA
   {
-    ctx:"Hambre · Pobreza",
-    dato:"13 millones de colombianos en pobreza extrema. Desnutrición crónica en el 10.8% de niños menores de 5 años. En La Guajira ese porcentaje sube al 27.9%.",
-    text:"En un municipio de La Guajira 4 niños menores de 5 años murieron de desnutrición en 3 meses. No hay médico hace 6 meses y el acueducto lleva 2 años sin funcionar. ¿Qué hace el Estado?",
+    ctx:"Pobreza · Alimentación",
+    dato:"13 millones de colombianos están en pobreza extrema. La desnutrición afecta al 27.9% de los niños menores de 5 años en La Guajira.",
+    text:"En un municipio, 4 niños murieron de desnutrición en 3 meses. No hay médico y el acueducto lleva 2 años sin funcionar. ¿Cuál es la primera respuesta del Estado?",
     opts:[
-      {t:"Declarar emergencia sanitaria ya. Eso activa recursos nacionales sin esperar al alcalde ni al Congreso.",s:{T:2,P:0,C:0}},
-      {t:"Agua potable antes que cualquier otra cosa. Un niño que toma agua contaminada se enferma aunque coma.",s:{T:0,P:2,C:0}},
-      {t:"La Guajira produce miles de millones en carbón y gas. Sus habitantes mueren de hambre. El problema no es falta de plata sino quién la controla.",s:{T:0,P:0,C:2}}
+      {t:"Activar de inmediato los recursos de emergencia nacionales sin esperar trámites locales. Cuando mueren niños, no hay tiempo para burocracia.",s:{T:2,P:0,C:0}},
+      {t:"Resolver primero el agua potable. Un niño que toma agua contaminada se enferma aunque coma.",s:{T:0,P:2,C:0}},
+      {t:"Entregar apoyo directo en efectivo a las familias para que puedan comprar lo que necesitan de inmediato, sin esperar que llegue la obra.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 18 — INSTITUCIONES
   {
-    ctx:"Instituciones",
-    dato:"El Congreso tiene aprobación del 11%. La Corte Constitucional ha tumbado más de 15 reformas del gobierno actual. El ejecutivo dice que la Corte está politizada.",
-    text:"El presidente logra que el Congreso apruebe una reforma importante. La Corte la tumba por fallas en el trámite. El gobierno ataca a los magistrados públicamente. ¿Quién tiene la razón?",
+    ctx:"Instituciones públicas",
+    dato:"El Congreso colombiano tiene una aprobación ciudadana del 11%. La Corte Constitucional ha tumbado varias reformas del gobierno actual por fallas en el trámite.",
+    text:"El gobierno aprueba una reforma en el Congreso y la Corte la tumba. El gobierno dice que la Corte está equivocada. ¿Qué debería pasar?",
     opts:[
-      {t:"Si hubo fallas en el trámite, el gobierno las cometió. La solución es corregir y volver a presentarla bien, no atacar al árbitro.",s:{T:0,P:2,C:0}},
-      {t:"Un gobierno que ataca a los jueces cuando fallan en su contra sigue el manual del autoritarismo. Da igual de qué partido sea.",s:{T:0,P:0,C:2}},
-      {t:"Tres poderes en conflicto permanente paralizan al país. Hace falta un mecanismo de mediación antes de que el ciudadano pague el costo.",s:{T:2,P:0,C:0}}
+      {t:"Si la Corte encontró errores en el procedimiento, el gobierno debe corregirlos y volver a presentar la reforma bien hecha.",s:{T:0,P:2,C:0}},
+      {t:"Un gobierno que ataca a los jueces cuando no le dan la razón debilita a toda la institucionalidad, no solo a sus opositores.",s:{T:0,P:0,C:2}},
+      {t:"Cuando los tres poderes entran en conflicto permanente, quien paga el costo es el ciudadano. Hace falta un mecanismo de mediación institucional.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 19 — EMPLEO JOVEN
   {
-    ctx:"Economía · Empleo",
-    dato:"Colombia creció 2.6% en 2025. El desempleo juvenil es del 15.3%. La inversión extranjera cayó 9.3% en el último trimestre.",
-    text:"Un joven de 24 años con técnico del SENA lleva 18 meses buscando empleo formal. Solo le ofrecen contratos de prestación de servicios sin prestaciones. ¿Qué falta?",
+    ctx:"Empleo · Juventud",
+    dato:"El desempleo juvenil en Colombia es del 15.3%. La mayoría de los jóvenes que consiguen trabajo reciben contratos sin prestaciones sociales.",
+    text:"Un joven con técnico del SENA lleva 18 meses buscando trabajo formal. Solo le ofrecen contratos de prestación de servicios sin prestaciones. ¿Qué se hace?",
     opts:[
-      {t:"Subsidio al primer empleo formal para empresas que contraten jóvenes en su primer trabajo. Que contratar joven y formal sea más barato que contratar informal.",s:{T:0,P:2,C:0}},
-      {t:"El problema es estructural: una economía informal no genera empleos formales por decreto. Hay que cambiar el modelo, no solo poner subsidios.",s:{T:0,P:0,C:2}},
-      {t:"Reducir el costo de contratar formalmente. Mientras sea más caro contratar en regla que de manera informal, las empresas seguirán eligiendo la informalidad.",s:{T:2,P:0,C:0}}
+      {t:"Subsidiar el primer contrato formal de jóvenes para que a las empresas les cueste menos contratar en regla que de forma irregular.",s:{T:0,P:2,C:0}},
+      {t:"Reducir los costos que tiene contratar formalmente. Hoy es tan costoso que muchas empresas prefieren la informalidad.",s:{T:2,P:0,C:0}},
+      {t:"El problema no se resuelve solo con subsidios. Hay que cambiar cómo funciona la economía para que genere empleos de calidad por sí misma.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 20 — SEGURIDAD CIUDADANA · EXTORSIÓN
   {
-    ctx:"Seguridad ciudadana",
-    dato:"En 2025 hubo 12.180 extorsiones reportadas solo en zonas urbanas. Se calcula que 7 de cada 10 extorsiones no se denuncian por miedo.",
-    text:"Un dueño de tienda en Medellín paga vacuna cada semana. Si no paga, lo amenazan. Lleva 3 años así. La Policía dice que no tiene cómo ayudarlo. ¿Qué pasa?",
+    ctx:"Extorsión · Negocios",
+    dato:"En 2025 se reportaron 12.180 extorsiones. Se calcula que 7 de cada 10 no se denuncian por miedo. Muchas se coordinan desde las cárceles.",
+    text:"Un tendero paga vacuna cada semana desde hace 3 años. Si no paga, lo amenazan. La Policía dice que no puede hacer nada. ¿Qué se necesita?",
     opts:[
-      {t:"Bloqueo total de comunicaciones en cárceles ya. Muchos de los cobros se coordinan desde adentro. Eso se puede resolver esta semana.",s:{T:2,P:0,C:0}},
-      {t:"Unidades especializadas en extorsión con respuesta en 24 horas. Si el que denuncia queda más expuesto, nadie denuncia.",s:{T:0,P:2,C:0}},
-      {t:"Protección real al denunciante. Si el tendero que reporta aparece muerto, nadie más va a denunciar nunca.",s:{T:0,P:0,C:2}}
+      {t:"Bloquear las comunicaciones en cárceles. Muchos de esos cobros se hacen desde adentro y eso se puede resolver rápido.",s:{T:2,P:0,C:0}},
+      {t:"Una unidad especializada en extorsión que responda en horas y proteja al denunciante. Sin protección real, nadie denuncia.",s:{T:0,P:2,C:0}},
+      {t:"Si el que denuncia queda más expuesto, nadie denuncia nunca. La prioridad es proteger al testigo antes que cualquier operación.",s:{T:0,P:0,C:2}}
     ]
   },
+
+  // 21 — PAZ Y NEGOCIACIÓN
   {
-    ctx:"Descentralización",
-    dato:"El 70% de los municipios colombianos no tiene capacidad técnica para ejecutar bien los recursos que reciben. Al mismo tiempo, Bogotá decide prioridades para territorios que no conoce.",
-    text:"Un alcalde rural recibe 2.000 millones del Sistema General de Participaciones pero no puede gastarlos porque la interventoría que exige la ley vale más que el proyecto. ¿Cómo se arregla eso?",
+    ctx:"Negociaciones de paz",
+    dato:"Hay grupos armados en proceso de negociación que siguen cometiendo crímenes. Los acuerdos de 2016 tienen cumplimiento parcial.",
+    text:"Un grupo lleva 3 años negociando pero sigue cometiendo delitos en los territorios. Las comunidades afectadas dicen que están peor que antes. ¿Qué se hace?",
     opts:[
-      {t:"Simplificar los requisitos para proyectos pequeños en municipios apartados. Un acueducto de 200 millones no puede tener los mismos trámites que una carretera de 200.000 millones.",s:{T:0,P:2,C:0}},
-      {t:"Que los municipios decidan directamente cómo gastar sus recursos con veeduría comunitaria, no con interventorías de Bogotá que no conocen el territorio.",s:{T:0,P:0,C:2}},
-      {t:"Asistencia técnica del gobierno nacional gratuita para municipios sin capacidad. Que el Estado ayude a gastar bien en vez de poner trabas.",s:{T:2,P:0,C:0}}
+      {t:"Si el grupo sigue delinquiendo después de 3 años, la negociación no está funcionando. Hay que actuar.",s:{T:2,P:0,C:0}},
+      {t:"Sin que el Estado cumpla lo que prometió en los territorios, ningún grupo entrega las armas. Los dos lados tienen que cumplir.",s:{T:0,P:0,C:2}},
+      {t:"Separar los grupos que tienen intención real de los que solo usan la negociación como escudo. No todos merecen el mismo trato.",s:{T:0,P:2,C:0}}
     ]
   },
+
+  // 22 — CAMPO · PRODUCCIÓN
   {
-    ctx:"Paz · Negociación",
-    dato:"Los acuerdos de paz de 2016 tienen cumplimiento parcial. Hay grupos armados que firmaron y que no han entregado armas. Hay territorios donde el Estado nunca llegó después del acuerdo.",
-    text:"Un grupo armado lleva 3 años en 'negociación' pero sigue cometiendo crímenes. El gobierno dice que hay avances. Las comunidades dicen que están peor. ¿Qué se hace?",
+    ctx:"Producción agrícola",
+    dato:"Colombia tiene 39 millones de hectáreas aptas para cultivar y solo usa 5.5 millones. El 83% de los campesinos no tiene maquinaria y el 66% no tiene riego.",
+    text:"Un municipio tiene tierra fértil pero los campesinos no producen suficiente porque no tienen riego ni maquinaria. Los jóvenes se van a la ciudad. ¿Cómo se activa ese campo?",
     opts:[
-      {t:"Si en 3 años de negociación el grupo sigue cometiendo crímenes, la negociación fracasó. Hay que actuar.",s:{T:2,P:0,C:0}},
-      {t:"Los acuerdos necesitan tiempo y cumplimiento del Estado también. Sin inversión en los territorios prometida, ningún grupo va a dejar las armas.",s:{T:0,P:0,C:2}},
-      {t:"Negociar con quienes tengan voluntad real y golpear a los que usan la negociación como escudo. No son todos iguales.",s:{T:0,P:2,C:0}}
+      {t:"Crédito fácil y rápido para comprar maquinaria y sistemas de riego. Hoy, tramitar un crédito rural tarda meses y exige garantías que el campesino no tiene.",s:{T:0,P:2,C:0}},
+      {t:"Apoyar a los campesinos para que compren maquinaria en grupo y vendan juntos. Solos no tienen poder de negociación; organizados sí.",s:{T:0,P:0,C:2}},
+      {t:"Atraer inversión privada al municipio con incentivos para que instale empresas que contraten local y compren la cosecha.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 23 — DESCENTRALIZACIÓN
   {
-    ctx:"Campo · Agroindustria",
-    dato:"Colombia cosecha 5.5 millones de hectáreas de 39 millones que tiene aptas. El 83% de los campesinos no tiene maquinaria. El 66% no tiene riego.",
-    text:"Un municipio del Tolima tiene tierra fértil pero los campesinos no producen suficiente porque no tienen riego ni maquinaria. Los jóvenes se van a la ciudad. ¿Qué mueve el campo?",
+    ctx:"Recursos · Municipios",
+    dato:"El 70% de los municipios no tiene capacidad técnica para ejecutar bien los recursos que recibe. Mientras tanto, muchas decisiones siguen tomándose en Bogotá.",
+    text:"Un alcalde recibe dinero del Estado para construir un acueducto pero los trámites exigidos cuestan más que la obra misma. ¿Cómo se arregla eso?",
     opts:[
-      {t:"Crédito fácil para maquinaria y sistemas de riego. El campo no produce más porque formalizar un crédito rural tarda meses y exige garantías que el campesino no tiene.",s:{T:0,P:2,C:0}},
-      {t:"Cooperativas campesinas con apoyo estatal para comprar maquinaria en grupo y negociar precios de venta juntos. Solo tienen poder si se organizan.",s:{T:0,P:0,C:2}},
-      {t:"Zonas agroindustriales con incentivos para empresas que inviertan en ese municipio y contraten local. El campo también necesita empresa privada.",s:{T:2,P:0,C:0}}
+      {t:"Simplificar los requisitos para obras pequeñas en municipios apartados. Un acueducto de 200 millones no puede tener los mismos trámites que uno de 200.000 millones.",s:{T:0,P:2,C:0}},
+      {t:"Que la comunidad beneficiaria decida y vigile el proceso directamente, sin tanta intermediación burocrática.",s:{T:0,P:0,C:2}},
+      {t:"El gobierno nacional debe ayudar técnicamente a los municipios que no tienen capacidad, en vez de solo exigirles requisitos que no pueden cumplir.",s:{T:2,P:0,C:0}}
     ]
   },
+
+  // 24 — DEMOCRACIA Y VOTO
   {
-    ctx:"Democracia · Voto",
-    dato:"El 41% de los colombianos en edad de votar no votó en la última elección. El 60% dice que el país va por mal camino sin importar quién gobierna.",
-    text:"Si el país sigue igual con cada gobierno, ¿cuál es el problema real?",
+    ctx:"Democracia · Por qué no cambia",
+    dato:"El 41% de los colombianos en edad de votar no votó en la última elección presidencial. El 60% dice que el país va por mal camino sin importar quién gobierne.",
+    text:"Si el país parece seguir igual con cada gobierno, ¿cuál cree que es el problema de fondo?",
     opts:[
-      {t:"Las élites que financian las campañas también cobran después con contratos. Mientras eso no cambie, el que llega al poder le trabaja a quien lo puso.",s:{T:0,P:0,C:2}},
-      {t:"El Estado nunca ha llegado de verdad a la mitad del territorio. No es problema de quién gobierna: es problema de Estado ausente.",s:{T:0,P:2,C:0}},
-      {t:"El problema es la falta de consecuencias: los políticos que roban o incumplen vuelven a ser elegidos. La ciudadanía tiene que votar con más información.",s:{T:2,P:0,C:0}}
+      {t:"Quienes financian las campañas después cobran con contratos y favores. Mientras eso no cambie, el que gobierna trabaja para quien lo puso.",s:{T:0,P:0,C:2}},
+      {t:"El Estado nunca ha llegado de verdad a la mitad del territorio. No es cuestión de quién llega al poder: es que el Estado no existe en muchos lugares.",s:{T:0,P:2,C:0}},
+      {t:"Los ciudadanos deben votar con más información. Políticos que roban o incumplen vuelven a ser elegidos porque la gente no tiene los datos para juzgarlos.",s:{T:2,P:0,C:0}}
     ]
   }
-];
+
+]; // fin BANCO
 
 const PERFILES={
-  T:{name:"El Tigre — Abelardo de la Espriella",desc:"Lo que más te preocupa es que las cosas funcionen: seguridad, resultados rápidos y menos burocracia. Crees que el problema no es falta de recursos sino que los que existen no se usan bien o los roban. Eso no es ideología de derecha ni de izquierda: es pragmatismo.",pct:"¿Cuánto puede cumplir desde la presidencia? Estimado: 35%. Varias de sus propuestas dependen de que el Congreso apruebe reformas legales."},
-  P:{name:"Paloma Valencia y Juan Daniel Oviedo",desc:"Prefieres soluciones concretas, medibles y con plazos. Crees que el Estado debe funcionar mejor antes de hacerse más grande, y que cada peso público debe llegar verificablemente a quien lo necesita. Eso no es ideología de derecha: es preferir resultados sobre promesas.",pct:"¿Cuánto puede cumplir desde la presidencia? Estimado: 62%. Es el programa con más propuestas que un presidente puede ejecutar sin necesitar mayoría en el Congreso."},
-  C:{name:"Iván Cepeda — Pacto Histórico",desc:"Lo que más te importa es atacar las causas de fondo: desigualdad, concentración del poder y deuda histórica con quienes el Estado nunca atendió. Crees que sin cambios estructurales los síntomas se repiten. Eso no es ideología de izquierda: es priorizar la raíz sobre el síntoma.",pct:"¿Cuánto puede cumplir desde la presidencia? Estimado: 38%. Sus propuestas más importantes necesitan mayorías en el Congreso que aún no están aseguradas."}
+  T:{
+    name:"El Tigre — Abelardo de la Espriella",
+    desc:"Sus respuestas se alinean con un enfoque que prioriza resultados rápidos, control del Estado sobre el territorio y consecuencias efectivas para quien incumple. Valora la acción ejecutiva directa y la rendición de cuentas inmediata.",
+    pct:"Viabilidad estimada de sus propuestas desde la presidencia: 35%. Varias dependen de reformas legales que requieren el Congreso."
+  },
+  P:{
+    name:"Paloma Valencia y Juan Daniel Oviedo",
+    desc:"Sus respuestas se alinean con soluciones concretas, medibles y ejecutables desde el primer día. Prefiere mecanismos verificables y uso eficiente de los recursos existentes antes que nuevas promesas.",
+    pct:"Viabilidad estimada de sus propuestas desde la presidencia: 62%. Es el programa con más propuestas que no requieren mayoría legislativa para ejecutarse."
+  },
+  C:{
+    name:"Iván Cepeda — Pacto Histórico",
+    desc:"Sus respuestas se alinean con atacar las causas estructurales de los problemas: concentración del poder, derechos exigibles y protagonismo de las comunidades en las decisiones que las afectan.",
+    pct:"Viabilidad estimada de sus propuestas desde la presidencia: 38%. Sus cambios más importantes necesitan mayorías en el Congreso que aún no están aseguradas."
+  }
 };
 
 function shuffle(a){return a.slice().sort(()=>Math.random()-.5);}
 
 function buildQuiz(){
-  // Seleccionar 12 preguntas aleatorias del banco de 24
   const sel=shuffle(BANCO).slice(0,12);
-  // En cada pregunta mezclar el orden de las 3 opciones
   return sel.map(q=>({...q,opts:shuffle(q.opts)}));
 }
 
@@ -533,19 +588,19 @@ function showResult(){
   const pr=PERFILES[win];
   document.getElementById('rname').textContent=pr.name;
   document.getElementById('rdesc').textContent=pr.desc;
-  document.getElementById('cump').innerHTML=`<strong>${pr.pct.split('?')[0]}?</strong><br>${pr.pct.split('?')[1]}`;
+  document.getElementById('cump').innerHTML=`<strong>¿Cuánto puede cumplir desde la presidencia?</strong><br>${pr.pct}`;
 
   const diff=mxP-Math.min(pT,pP,pC);
   let bv,bc;
   if(mxP>=65&&diff>30){
-    bv='Voto muy concentrado';
-    bc=`El ${mxP}% de tus respuestas van al mismo lado. Puede ser convicción fuerte, pero antes de votar vale preguntarse: ¿respondiste cada pregunta por lo que decía, o ya tenías decidido a quién defender?`;
+    bv='Preferencia muy concentrada';
+    bc=`El ${mxP}% de sus respuestas apuntan al mismo lado. Puede reflejar una convicción sólida. Vale la pena verificar si cada respuesta se tomó evaluando el problema concreto o si hubo una tendencia previa que influyó.`;
   } else if(mxP>=46){
-    bv='Tendencia clara con criterio propio';
-    bc=`Tienes una inclinación definida pero no todas tus respuestas van al mismo lado. Eso indica que analizaste cada pregunta por separado, que es exactamente lo que hace un voto consciente.`;
+    bv='Preferencia definida con criterio propio';
+    bc=`Tiene una inclinación clara pero sus respuestas no son uniformes. Eso indica que evaluó cada situación por separado, que es la base de una decisión de voto informada.`;
   } else {
-    bv='Voto repartido — cada tema lo evaluaste solo';
-    bc=`Tus respuestas no se concentran en un solo candidato. Piensas cada problema de forma independiente. Ninguno de los tres te representa del todo, lo cual puede ser la posición más honesta.`;
+    bv='Perfil distribuido — evalúa cada tema de forma independiente';
+    bc=`Sus respuestas no se concentran en un solo candidato. Analiza cada problema de forma autónoma. Ninguno de los tres lo representa completamente, lo cual refleja un criterio propio sólido.`;
   }
   document.getElementById('bv').textContent=bv;
   document.getElementById('bcont').textContent=bc;
@@ -620,8 +675,8 @@ function renderAdmin(){
     <div class="stbox"><div class="stnum" style="color:#444">${cC}</div><div class="stlb">Cepeda</div></div>
   `;
   const w=document.getElementById('adtw');
-  if(!data.length){w.innerHTML='<p class="ademp">Aún no hay resultados en este navegador.</p>';return;}
-  let h=`<table class="adt"><thead><tr><th>#</th><th>Fecha</th><th>Nombre</th><th>Resultado</th><th>T</th><th>P</th><th>C</th><th>Tipo</th></tr></thead><tbody>`;
+  if(!data.length){w.innerHTML='<p style="font-size:13px;color:var(--muted);padding:14px 0">Aún no hay resultados en este navegador.</p>';return;}
+  let h=`<table class="adt"><thead><tr><th>#</th><th>Fecha</th><th>Nombre</th><th>Resultado</th><th>Tigre</th><th>Paloma</th><th>Cepeda</th><th>Perfil</th></tr></thead><tbody>`;
   data.slice().reverse().forEach((r,i)=>{
     h+=`<tr><td>${data.length-i}</td><td>${r.fecha}</td><td>${r.nombre}</td><td>${r.resultado.split('—')[0].trim()}</td><td>${r.tigre}%</td><td>${r.paloma}%</td><td>${r.cepeda}%</td><td style="font-size:10px">${r.sesgo}</td></tr>`;
   });
